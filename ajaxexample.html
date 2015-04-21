@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+$.ajax({
+    url: "http://archive.org/metadata/frenchenglishmed00gorduoft/metadata/title",
+    dataType: 'jsonp',
+    success: function(results){
+		var title = results.result;
+		$('#results').append("Title: "+title);
+    }
+});
+</script>
+</head>
+<body>
+
+<h2>Data Returned from Internet Archive:</h2>
+
+<div id="results"></div>
+
+</body>
+</html>
